@@ -15,15 +15,13 @@ app.get("/api", (req, res) => {
     res.status(200).json({
         slack_name: req.query.slack_name,
         current_day: `${days[date.getDay()-1]}`,
-        utc_time: `${date.toISOString()}`,
+        utc_time: `${date.toISOString().slice(0, 19)}Z`,
         track: req.query.track,
         github_file_url: "https://github.com/Dan33760/dansk-hngx-task-one/blob/master/server.js",
         github_repo_url: "https://github.com/Dan33760/dansk-hngx-task-one.git",
         status_code: 200
       });
 })
-
-
 
 const PORT = process.env.PORT || 8080;
 

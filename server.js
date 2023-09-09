@@ -3,6 +3,12 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.json({
+        message: "Welcome to my Api, go to the route /api and add params slack_name and track"
+    })
+})
+
 app.get("/api", (req, res) => {
     const date = new Date();
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Fryday', 'Saturday', 'Sunday'];

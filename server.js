@@ -11,7 +11,7 @@ app.get("/api", (req, res) => {
         current_day: `${days[date.getDay()-1]}`,
         utc_time: `${date.toISOString()}`,
         track: req.query.track,
-        github_file_url: "https://github.com/Dan33760/dansk-hngx-task-one.git/server.js",
+        github_file_url: "https://github.com/Dan33760/dansk-hngx-task-one/blob/master/server.js",
         github_repo_url: "https://github.com/Dan33760/dansk-hngx-task-one.git",
         status_code: 200
       });
